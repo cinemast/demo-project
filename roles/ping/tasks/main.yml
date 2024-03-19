@@ -5,3 +5,11 @@
 - name: Ping result
   debug:
     msg: "{{ ping_result.stdout_lines }}"
+
+- name: Ping other site
+  shell: ping -c 1 -w 2 derstandard.at
+  register: ping_result
+
+- name: Ping result
+  debug:
+    msg: "{{ ping_result.stdout_lines }}"
