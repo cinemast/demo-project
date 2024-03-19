@@ -13,3 +13,8 @@
 - name: Ping result
   debug:
     msg: "{{ ping_result.stdout_lines }}"
+
+
+- name : Dump extra vars
+  debug:
+    msg: "{{foo}}"
